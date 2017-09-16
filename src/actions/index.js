@@ -66,6 +66,21 @@ export const logout = () => {
   };
 };
 
+// Added this to create a signOutUser
+export const signOutUser = () => {
+  return (dispatch) => {
+    axios.post(`${ROOT_URL}/logout`)
+      .then(() => {
+        dispatch({
+          type: USER_UNAUTHENTICATED,
+        });
+      })
+      .catch(() => {
+        dispatch(authError('Failed to log you out'));
+      });
+  };
+};
+
 export const getUsers = () => {
   return (dispatch) => {
     axios.get(`${ROOT_URL}/restricted/users`)

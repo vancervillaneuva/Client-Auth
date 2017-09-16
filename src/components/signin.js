@@ -42,7 +42,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-SignIn = connect(mapStateToProps, { signIn })(SignIn);
+//SignIn = connect(mapStateToProps, { signIn })(SignIn);
+SignIn = connect(mapStateToProps, { login })(SignIn);  // import { login } from '../actions';
 
 export default reduxForm({
   form: 'signin',
