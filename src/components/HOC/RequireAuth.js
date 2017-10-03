@@ -16,11 +16,8 @@ export default (ComposedComponent) => {
             // Here, check to see if `this.props.authenticated` is true
             // If it isn't, then we don't want this component to return anything
             // Else, render the component that was passed to this higher-order component
-             if (this.props.authenticated) {
-             }
-            return (
-              <div>{this.props.history}hi</div>   
-            );
+            if (this.props.authenticated !== true) return null;
+            return <ComposedComponent {...this.props} />
         }
     }
 
