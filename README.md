@@ -1,6 +1,6 @@
 # LS-Client-Auth
 
-## Assignment
+## Assignment (VV - Works with the Auth project at port 5000.  This project is at port 3000.))
 Start your MongoDB server by running `mongod` from the command line.
 Start up your Auth server that we extended in the mini lab.
 
